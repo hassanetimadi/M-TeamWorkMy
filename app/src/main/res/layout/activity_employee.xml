@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_user_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mhassanetimadi.CRIDA_e_teamwork.ActivityEmployee">
+
+    <include android:id="@+id/toolbar"
+        layout="@layout/app_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res‐auto"
+                android:id="@+id/imageView_profile"
+                android:src="@drawable/ic_employees"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:civ_border_width="2dp"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginLeft="@dimen/default_margin"
+                app:civ_border_color="#FF000000"/>
+
+            <LinearLayout
+                android:id="@+id/row1"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:layout_below="@id/imageView_profile"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Username: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/editText_username"
+                    android:text="John Smith, john123"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:textSize="17sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row2"
+                android:orientation="horizontal"
+                android:layout_below="@id/row1"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/textView_userCategory"
+                    android:text="Not set"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:textSize="17sp"
+                    android:layout_below="@id/row1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row3"
+                android:orientation="horizontal"
+                android:layout_below="@id/row2"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Email:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/textView_Email"
+                    android:text="Not set"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:textSize="17sp"
+                    android:layout_below="@id/row1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row4"
+                android:orientation="horizontal"
+                android:layout_below="@id/row3"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Phone:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/textView_phone"
+                    android:text="Not set"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:textSize="17sp"
+                    android:layout_below="@id/row1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

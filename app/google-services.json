@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "529211879027",
+    "firebase_url": "https://m-teamwork.firebaseio.com",
+    "project_id": "m-teamwork",
+    "storage_bucket": "m-teamwork.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529211879027:android:1280d2416da522c0",
+        "android_client_info": {
+          "package_name": "com.qa30m.m_teamwork"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529211879027-qk8p5490c4aeekgtasdsl28hk4klbkjo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.qa30m.m_teamwork",
+            "certificate_hash": "c006b16136a507a1584c134b448ef5e272cb8d41"
+          }
+        },
+        {
+          "client_id": "529211879027-k73kjk0pff76abashiqd8pi8r4fifb4g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBisuOnbT__m4Z47Hwct24ieZFmf4NqqkM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529211879027-k73kjk0pff76abashiqd8pi8r4fifb4g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
