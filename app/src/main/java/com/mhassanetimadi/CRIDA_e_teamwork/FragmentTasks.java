@@ -36,6 +36,7 @@ public class FragmentTasks extends Fragment {
     public static final String EXTRA_KEY = "key";
     private ArrayList<Task> taskArrayList = new ArrayList<>();
     private EmployeesAdapter tasksAdapter;
+    int a = 222;
     private ChildEventListener eventListener;
     private RecyclerView mRecyclerView;
     private DatabaseReference mDatabaseRef;
