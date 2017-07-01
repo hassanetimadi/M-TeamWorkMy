@@ -204,6 +204,8 @@ public class ActivitySignin extends AppCompatActivity {
                 editor.putString(DbContract.USER_NAME, employee.getUsername());
                 editor.putString(DbContract.USER_CATEGORY, employee.getCategory());
                 editor.putString(DbContract.PROFILE_PIC, employee.getProfilePic());
+
+                Log.i("qasimtag cat", employee.getCategory());
                 editor.commit();
             }
         }

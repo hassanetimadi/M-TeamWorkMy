@@ -61,7 +61,7 @@ public class ActivityTaskDetial extends AppCompatActivity implements View.OnClic
 
         addCommentButton.setOnClickListener(this);
 
-        key = getIntent().getStringExtra(FragmentTasks.EXTRA_KEY);
+        key = getIntent().getStringExtra(FragmentMyTasks.EXTRA_KEY);
         curTaskDbRef = FirebaseDatabase.getInstance().getReference().child(DbContract.DB_TASKS).child(key);
         curTaskRepliesDbRef = curTaskDbRef.child(TASK_REPLIES);
 

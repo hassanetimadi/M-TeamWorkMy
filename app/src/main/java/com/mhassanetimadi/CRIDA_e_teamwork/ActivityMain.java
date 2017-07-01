@@ -1,6 +1,7 @@
 package com.mhassanetimadi.CRIDA_e_teamwork;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
@@ -82,7 +83,21 @@ public class ActivityMain extends AppCompatActivity
 
             if (section == TASKS_SECTION) {
                 toolbar.setTitle("Tasks");
-                fragment = new FragmentTasks();
+
+                SharedPreferences sharedPreferences = getSharedPreferences(DbContract.PREF_USER, MODE_PRIVATE);
+                String userCategory = sharedPreferences.getString(DbContract.USER_CATEGORY, "nocat");
+                Log.i("qasimtag", userCategory);
+
+                if (userCategory.equals(DbContract.USER_LEVELS[0])) {
+                    fragment = new FragmentEmployeesTasks();
+                    Log.i("qasimtag", "0");
+                }else if(userCategory.equals(DbContract.USER_LEVELS[3])) {
+                    fragment = new FragmentMyTasks();
+                    Log.i("qasimtag", "3");
+                }else {
+                    fragment = new FragmentTask();
+                    Log.i("qasimtag", "-1");
+                }
             } else if (section == EMPLOYEES_SECTION) {
                 toolbar.setTitle("Employees");
                 fragment = new FragmentEmployees();

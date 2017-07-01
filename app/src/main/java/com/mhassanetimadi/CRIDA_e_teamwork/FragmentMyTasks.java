@@ -30,19 +30,18 @@ import java.util.ArrayList;
  * Created by M-Qasim on 1/21/2017.
  */
 
-public class FragmentTasks extends Fragment {
+public class FragmentMyTasks extends Fragment {
 
     public static final int REQUEST_CODE = 1003;
     public static final String EXTRA_KEY = "key";
     private ArrayList<Task> taskArrayList = new ArrayList<>();
     private EmployeesAdapter tasksAdapter;
-    int a = 2222;
     private ChildEventListener eventListener;
     private RecyclerView mRecyclerView;
     private DatabaseReference mDatabaseRef;
     private Context mContext;
 
-    public FragmentTasks() {
+    public FragmentMyTasks() {
         // Required public empty constructor
     }
 
@@ -129,7 +128,7 @@ public class FragmentTasks extends Fragment {
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.add_task, menu);
+//        inflater.inflate(R.menu.add_task, menu);
     }
 
     @Override
@@ -153,12 +152,12 @@ public class FragmentTasks extends Fragment {
                 String curUser = mContext.getSharedPreferences(DbContract.PREF_USER, Context.MODE_PRIVATE)
                         .getString(DbContract.USER_NAME, "no name");
 
-                String managerUserName = dataSnapshot.child(DbContract.MANAGER_USER_NAME).getValue().toString();
+                String to = dataSnapshot.child(ActivityAddTask.TO).getValue().toString();
 
-                if (curUser.equals(managerUserName)) {
+                if (curUser.equals(to)) {
                     String title = dataSnapshot.child(ActivityAddTask.TITLE).getValue().toString();
                     String description = dataSnapshot.child(ActivityAddTask.DESCRIPTION).getValue().toString();
-                    String to = dataSnapshot.child(ActivityAddTask.TO).getValue().toString();
+                    String managerUserName = dataSnapshot.child(DbContract.MANAGER_USER_NAME).getValue().toString();
                     String key = dataSnapshot.getKey();
 
                     // add employee to list
